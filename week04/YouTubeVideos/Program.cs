@@ -6,7 +6,7 @@ class Program
     {
         List<Video> videos = new List<Video>();
 
-       Video video1 = new Video(" Angels Like You ", "Miley Cyrus", 245);
+        Video video1 = new Video(" Angels Like You ", "Miley Cyrus", 245);
         video1.AddComment("Maria Lopez", "It's my favorite song");
         video1.AddComment("Claudia Ruiz", "I love Miley Cyrus!!");
         video1.AddComment("Ann Gomez", "This song hit me unexpectedly.");
