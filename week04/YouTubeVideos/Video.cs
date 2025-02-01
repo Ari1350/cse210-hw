@@ -1,35 +1,35 @@
 using System;
 
 class Video{
-    public string Title { get; set; }
-    public string Person { get; set; }
-    public int Duration { get; set; } 
-    private List<Comment> comments;
+    public string _Title { get; set; }
+    public string _Person { get; set; }
+    public int _Duration { get; set; } 
+    private List<Comment> _comments;
 
     public Video(string title, string person, int duration)
     {
-        Title = title;
-        Person = person;
-        Duration = duration;
-        comments = new List<Comment>();
+        _Title = title;
+        _Person = person;
+        _Duration = duration;
+        _comments = new List<Comment>();
     }
 
     public void AddComment(string person, string text)
     {
-        comments.Add(new Comment(person, text));
+        _comments.Add(new Comment(person, text));
     }
 
     public int GetCommentCount()
     {
-        return comments.Count;
+        return _comments.Count;
     }
 
     public void DisplayVideoInfo()
     {
-        Console.WriteLine($"Title: {Title}\nAuthor: {Person}\nDuration: {Duration} seconds\nComments: {GetCommentCount()}");
-        foreach (var comment in comments)
+        Console.WriteLine($"Title: {_Title}\nAuthor: {_Person}\nDuration: {_Duration} seconds\nComments: {GetCommentCount()}");
+        foreach (var comment in _comments)
         {
-            Console.WriteLine($"- {comment.Person}: {comment.Text}");
+            Console.WriteLine($"- {comment._Person}: {comment._Text}");
         }
         Console.WriteLine();
     }
