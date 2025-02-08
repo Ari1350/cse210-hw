@@ -9,7 +9,6 @@ public class Scripture{
         _reference = reference;
         _words = new List<Word>();
 
-        // Divide el texto en palabras y crea objetos Word.
         foreach (string word in text.Split(' '))
         {
             _words.Add(new Word(word));
